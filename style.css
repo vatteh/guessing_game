@@ -16,23 +16,42 @@ h1 {
 }
 
 h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
+	font: 24px georgia, sans-serif;
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
 }
 
-.button_container {
-	margin: 20px;
+input {
+	margin-right: 20px;
+	width: 100px;
+	border:solid 3px #63124B;
+	font-size: 24px;
+	top: 5px;
+	text-align: center;
+
+}
+
+.more_buttons_container {
+	margin: 20px 0 0 0;
 }
 
 #hint {
 	margin-left: 20px;
 }
 
-input {
-	margin-right: 20px;
-	height: 30px;
-	border:solid 3px #63124B;
+.main-box {
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	background-color:#47A19E;
+	box-shadow: inset 0px 1px 1px #4D5757, 0px 1px 0px #71CDCA;
+}
+
+.guess_container {
+	margin: 0 auto;
 }
 
 .guess_button {
@@ -51,6 +70,8 @@ input {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	box-shadow: inset 0px 1px 0px #CFA2C1, 0px 5px 0px 0px #593B50, 0px 10px 5px #357573;
+
+	margin-top: 20px;
 }
 
 .guess_button::before {
@@ -109,3 +130,25 @@ input {
 	color-stop(0, rgb(159,109,144)),
 	color-stop(1, rgb(135,89,121)));
 }
+
+#guess-count {
+  	color: white;
+}
+
+#guess-count-win {
+ 	-webkit-animation: blink .75s linear infinite;
+    -moz-animation: blink .75s linear infinite;
+    -ms-animation: blink .75s linear infinite;
+    -o-animation: blink .75s linear infinite;
+    animation: blink .75s linear infinite;
+}
+
+@keyframes blink {  
+    0% { color: yellow; }
+    100% { color: white; }
+}
+
+@-webkit-keyframes blink {
+    0% { color: yellow; }
+    100% { color: white; }
+} 
