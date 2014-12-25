@@ -7,7 +7,7 @@
   <meta name="A game where you guess a number between 1 to 100" content="">
   <meta name="Victor Atteh" content="Guessing game">
   <link rel="stylesheet" href="style.css">
-  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="libraries/jquery-2.1.3.min.js"></script>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 
 		<div class='main-box'>
 			<input type='text' id='input_field' placeholder='1-100' class=''/>
-		    <a class='guess_button' id='guess' href="#">
+		    <a class='guess_button' id='guess-5' href="#">
                 Did I guess right!
             </a>
 	    
@@ -30,13 +30,21 @@
 		    </div>
 		</div>
 		<h3 id='guess-count'>You get 5 tries to guess my number</h3>
+	
+		<div id='guesses_made_container'>
+			<div class="circleBase"></div>
+			<div class="circleBase"></div>
+			<div class="circleBase"></div>
+			<div class="circleBase"></div>
+			<div class="circleBase"></div>
+		</div>
 	</div>
   <script src='script.js'></script>
   <script>
 	  (function() {
 	  	var guessingGame = new GuessingGame($('.wrapper'));
 
-		  guessingGame.mainBox.find('#guess').on('click', function() {
+		  guessingGame.mainBox.find('.guess_button').on('click', function() {
 		  	guessingGame.submitGuess();
 		  });
 

@@ -25,14 +25,14 @@ input {
 	margin-right: 20px;
 	width: 100px;
 	border:solid 3px #63124B;
-	font-size: 24px;
+	font-size: 27px;
 	top: 5px;
 	text-align: center;
-
+	position: relative;
 }
 
 .more_buttons_container {
-	margin: 20px 0 0 0;
+	margin: 25px 0 0 0;
 }
 
 #hint {
@@ -45,6 +45,18 @@ input {
 	text-align: center;
 	color: #fff;
 	padding: 20px;
+	border-radius: 5px;
+	background-color:#47A19E;
+	box-shadow: inset 0px 1px 1px #4D5757, 0px 1px 0px #71CDCA;
+}
+
+#guesses_made_container {
+	margin: 20px auto;
+	padding: 5px;
+	height: 50px;
+	width: 270px;
+	text-align: center;
+	color: #fff;
 	border-radius: 5px;
 	background-color:#47A19E;
 	box-shadow: inset 0px 1px 1px #4D5757, 0px 1px 0px #71CDCA;
@@ -70,12 +82,10 @@ input {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	box-shadow: inset 0px 1px 0px #CFA2C1, 0px 5px 0px 0px #593B50, 0px 10px 5px #357573;
-
 	margin-top: 20px;
 }
 
 .guess_button::before {
-	content:"5";
 	width:35px;
 	max-height:29px;
 	height:100%;
@@ -95,6 +105,30 @@ input {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	box-shadow:inset 0px 1px 0px #CFA2C1, 0px 5px 0px 0px #422239, 0px 10px 5px #357573;
+}
+
+#guess-5::before {
+	content:"5";
+}
+
+#guess-4::before {
+	content:"4";
+}
+
+#guess-3::before {
+	content:"3";
+}
+
+#guess-2::before {
+	content:"2";
+}
+
+#guess-1::before {
+	content:"1";
+}
+
+#guess-0::before {
+	content:"0";
 }
 
 .guess_button:active {
@@ -152,3 +186,41 @@ input {
     0% { color: yellow; }
     100% { color: white; }
 } 
+
+.circleBase {
+	color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    display: inline-block;
+    font-size:26px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: inset 0px 1px 0px #CFA2C1, 0px 1px 0px #357573;
+}
+
+#circleType-VeryCold {
+    background: #3F3CA8;
+}
+
+#circleType-Cold {
+    background: #487AD5;
+}
+
+#circleType-Warm {
+    background: #E5D84C;
+}
+
+#circleType-Hot {
+    background: #E0A14D;
+}
+
+#circleType-VeryHot {
+    background: #D5463B;
+}
+
+#circleType-Win {
+    background-image: url(images/star.png);
+    background-size: 95% 95%;
+}
