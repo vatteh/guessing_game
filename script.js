@@ -6,6 +6,7 @@ function GuessingGame(mainBox) {
 	this.inputField = this.mainBox.find('#input_field');
 	this.guessCountText = this.mainBox.find('#guess-count');
 	this.guessButton = this.mainBox.find('.guess_button');
+	this.soundFx = this.mainBox.find('#soundFx'); 
 	this.circles = this.mainBox.find('.circleBase').map(function() {
     	return $(this);
   	});
@@ -49,7 +50,6 @@ GuessingGame.prototype.submitGuess = function() {
 	if (guess == this.myNumber) {
 		this.guessedTheNumber();
 		this.circles[this.guessesMade.length-1].attr("id", "circleType-Win");
-		console.log(this.guessesMade.length-1);
 	} else {
 		if (this.guessesLeft == 4) {
 			this.guessCountText.html(this.circleType(guess)[0] + this.circleType(guess)[1] + "Four guesses left");
@@ -95,6 +95,7 @@ GuessingGame.prototype.hint = function() {
 
 GuessingGame.prototype.guessedTheNumber = function() {
 	this.guessCountText.html(this.myNumber + " is it! You guessed my number!").attr("id", "guess-count-win");
+	this.soundFx[0].play();
 	this.guessesLeft = 0;
 };
 
